@@ -42,8 +42,8 @@ for sticky_item in sticky_items.contents:
         'body': article_text.strip('\n')
     })
     
-#Готовим json для сохранения в файл словаря городов
+#Готовим json для сохранения в файл словаря новостей
 text = json.dumps(result, sort_keys=False, indent=4, ensure_ascii=False)
-#Сохраняем города и их количество в файл json
+#Сохраняем новости в файл json
 with open('gismeteo_news.json', 'w', encoding='utf-8') as file:
     file.write(text)
